@@ -18,14 +18,9 @@
     </div>
   </header>
 
+  <%= yield %>
 
-  <div class="row">
-    <div class="small-12 small-centered columns">
-      <%= yield %>
-    </div>
-  </div>
-
-  <footer class="row global-footer">
+  <footer class="row global-footer text-center">
     <div class="small-12 small-centered columns">
       <%= link_to "Already have an account? Sign in.", login_path %>
     </div>
