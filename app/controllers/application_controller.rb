@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 
   private
 
+
   def go_back_link_to(path)
     @go_back_link_to ||= path
     @go_back_link_to
