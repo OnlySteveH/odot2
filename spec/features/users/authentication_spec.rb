@@ -4,7 +4,7 @@ describe "Logging In" do
   it "logs the user in and goes to the todo lists" do
     User.create(first_name: "Jason", last_name: "Seifer", email: "jason@teamtreehouse.com", password: "treehouse1", password_confirmation: "treehouse1")
     visit "/"
-    click_link "Sign In"
+    click_link "Sign in"
     fill_in "Email Address", with: "jason@teamtreehouse.com"
     fill_in "Password", with: "treehouse1"
     click_button "Sign In"
@@ -13,7 +13,7 @@ describe "Logging In" do
     expect(page).to have_content("Thanks for logging in!")
   end
 
-  it "diplays the email address in the event of a failed login" do
+  it "displays the email address in the event of a failed login" do
     visit new_user_session_path
     fill_in "Email Address", with: "jason@teamtreehouse.com"
     fill_in "Password", with: "incorrect"
